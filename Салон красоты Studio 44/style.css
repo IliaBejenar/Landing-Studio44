@@ -484,3 +484,45 @@ img {
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(233,30,99,0.45);
 }
+
+/* NAV LINKS ANIMATION */
+.nav a {
+  position: relative;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+/* Цвет текста при hover */
+.nav a:hover {
+  color: #e91e63;
+}
+
+/* Линия под ссылкой */
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #e91e63;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Анимация линии */
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* ACTIVE STATE (Home) */
+.nav a.active {
+  color: #e91e63;
+}
+
+.nav a.active::after {
+  width: 100%;
+}
